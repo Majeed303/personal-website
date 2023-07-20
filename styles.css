@@ -1,0 +1,278 @@
+*
+{
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins' , sans-serif;
+
+}
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    color: #fefefe;
+    background-color: #000000;
+    cursor: url('./images/p.png'), auto;
+    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  --scroll-duration: 0.10s; /* Adjust as desired */
+}
+
+       /* NAVBAR BUTTON */
+.contact-button {
+  display: inline-block;
+   padding: 10px 20px; 
+  color: #fff; /* Set the desired text color */
+ border-radius: 5px; 
+ text-decoration: none;
+background: #0ef;
+  }
+  
+  .contact-button:hover {
+    background-color: #000000; /* Set the desired hover background color */
+  } 
+    /* NAVBAR BUTTON */
+
+
+          /* HOME*/
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between; 
+    min-height: 100vh;
+    height: 100vh;
+    background-color: #080808;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content{
+   max-width: 600px;
+   color: white;
+}
+.home-content h3{
+     font-size: 32px;
+     font-weight: 700;
+     opacity: 0;
+     animation: slideBottom 1s ease forwards;
+     animation-delay: .7s;
+}
+
+.home-content h3 span{
+    color: #0ef;
+
+}
+
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+   
+}
+.home-content  p {
+    font-size: 20px;
+    color: white;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.25 * var);
+}
+.home-sci a:hover{
+    background-color: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef
+}
+.btn-box:hover{
+    box-shadow: 0 0  5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan , 0 0 200px cyan
+
+}
+.images{
+    width: 30%;
+    height: 95%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    top: 50%;
+   animation: moveUpDown 6s ease-in-out infinite;
+}
+.logo{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    cursor: not-allowed;
+}
+.navbare{
+    opacity: 0;
+    animation: slidenav 1s ease forwards;
+}
+.image-caption {
+    text-align: center;
+    padding-top: 2rem;
+    color: white;
+    font-weight: 600;
+    font-size: large;
+}
+
+.linee {
+    width: 100%;
+    border-top: 0.5px solid rgb(241, 241, 241);
+  }
+  
+  
+            /* responsive       */
+
+@media (max-width: 767px){
+    .images{
+      display: none;
+    }
+    .home-content{
+        max-width: 400px;
+     }
+     .home-content  p {
+        font-size: 20px;
+        color: white;
+        max-width: 400px;
+    }
+    .home-content h3{
+        
+        font-weight: 700;
+   }
+   .image-caption {
+    font-size: medium;
+   }
+  }
+  .grid li a img {
+   height: 120px;
+   width: 60%;
+  }
+@media(max-width:1020px){
+    .home-content  p {
+        font-size: 20px;
+        color: white;
+        max-width: 400px;
+    }
+
+}
+@media (max-width: 576px) {
+    .image-caption {
+        font-size: xx-small;
+    }
+    .grid li a img {
+        height: 70px;
+        width: 100%;
+       }
+} 
+@media (max-height: 600px) {
+    /* Styles for screens with a maximum height of 600px */
+    .home {
+      min-height: 120vh;
+      max-height: none;
+    }
+    .grid li a img {
+        height: 120px;
+        width: 60%;
+       }
+  }
+  
+  @media (max-height: 400px) {
+    /* Styles for screens with a maximum height of 400px */
+    .home {
+      min-height: 60vh;
+    }
+    .grid li a img {
+        height: 80px;
+        width: 40%;
+       }
+  }
+  @media(max-width: 765px){
+    .home {
+        min-height: 100vh;
+      }
+  }
+
+         /* responsive       */
+
+        /* KEYFRAMMERS */
+@keyframes moveUpDown {
+    0%, 100% { transform: translateY(-45%); }
+    50% { transform: translateY(-50%); } /* Adjust the percentage to control the movement speed */
+  }
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slidenav {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+        /* END  KEYFRAMMERS */
